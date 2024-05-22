@@ -238,13 +238,50 @@
             }
         }
     </style>
+     <style>
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            padding: 0;
+        
+        }
+    
+        .banner-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+    
+        .overlay-box {
+            position: absolute;
+            top: 90%;
+            left: 50%; 
+            width: 50%;
+        
+            background-color: white; 
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%, -50%); 
+            z-index: 2;
+        }
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+        p, li {
+           font-size: 16px;
+        }
+        </style>
      <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 </head>
 <body>
 
     <div class="container-fluid p-0">
 
-        <nav class="navbar navbar-expand-lg" style="background-color: #55286F;" >
+        <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #55286F;" >
             <div class="container-md py-0">
                 <a class="navbar-brand text-light fs-4 d-flex justify-content-center" href="home.html">
                     <img src="assets/crochet-logo.png" class="d-flex justify-content-center" width="100px" height="100px" alt="">
@@ -252,20 +289,19 @@
                 <button class="navbar-toggler bg-body-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item nav-pills">
-                            <a class="nav-link px-3 active fw-semibold bg-body-secondary ms-2" href="home.html">Home</a>
+                            <a class="nav-link px-3 active bg-body-secondary fw-semibold  ms-2" href="home.html">Home</a>
                         </li>
                         <li class="nav-item nav-pills">
                             <a class="nav-link text-light fw-semibold px-3 ms-2" href="products.html">Products</a>
                         </li>
                         <li class="nav-item nav-pills">
-                            <a class="nav-link text-light fw-semibold px-3 ms-2" href="crocheter.html">Crocheter</a>
+                            <a class="nav-link fw-semibold text-light px-3 ms-2" href="crocheter.html">Crocheter</a>
                         </li>
                         <li class="nav-item nav-pills">
-                            <a class="nav-link text-light fw-semibold px-3 ms-2" href="business.html">Business</a>
+                            <a class="nav-link  text-light fw-semibold px-3 ms-2" href="business.html">Business</a>
                         </li>
                         <li class="nav-item nav-pills">
                             <a class="nav-link text-light fw-semibold px-3 ms-2" href="contacts.html">Contacts</a>
@@ -278,7 +314,6 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
                     </ul>
 
@@ -287,13 +322,28 @@
         </nav>
 
     </div>
-    
-     
+
+    <div class="container-fluid p-0 ">
+        <div class="banner-container mb-5">
+            <video autoplay muted loop class="banner-video">
+                <source src="assets/sam.mp4" type="video/mp4">
+            </video>
+            <div class="overlay-box d-flex flex-column p-4 rounded">
+                <h1 class="text-center p-4">Shelby Lorraine's Crochet</h1>
+                <p class="text-secondary text-center" style="line-height: 2;">Welcome to Shelby Lorraine's Crochet, your ultimate destination for handmade crochet creations! At Shelby's, we specialize in crafting high-quality, unique, and cozy crochet products that add warmth and charm to your life.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div style="margin-top: 200px;"></div>
 
     
     <div class="container-fluid mt-5 p-0">
-
-        <div class="border-2 border-bottom container-md mb-4 text-center">
+        <hr>
+        <div class="border-2 border-bottom container-md mb-4 mt-5 text-center">
         <h1 style="color: #210B2C;">Assorted Products</h1>
         <p><small class="text-secondary" style="font-family: Sansita; font-size: 20px;">Discover our unique collection of handmade crochet items, crafted to bring warmth, style, and a touch of charm to your everyday life.</small></p>
         </div>
@@ -553,59 +603,23 @@
                 
                 <ul class="footer__nav d-flex justify-content-center align-items-center" >
                     <li class="nav__item">
-                        <h2 class="nav__title">Home</h2>
-                        <ul class="nav__ul">
-                            <li style="font-size: 20px;"><a href="#">Products</a></li>
-                            <li style="font-size: 20px;"><a href="#aud">Audio</a></li>
-                            <li style="font-size: 20px;" ><a href="#hl">Home & Living</a></li>
-                            <li style="font-size: 20px;" ><a href="#acc">Accessories</a></li>
-                        </ul>
+                        <a href="home.html"><h3 class="nav__title">Home</h3></a>
                     </li>
                     <li class="nav__item">
-                    <h2 class="nav__title">Products</h2>
-                        <ul class="nav__ul">
-                            <li style="font-size: 20px;"><a href="{% url 'cart' %}">Current Cart</a></li>
-                            <li style="font-size: 20px;"><a href="{% url 'cart' %}">Product</a></li>
-                            <li style="font-size: 20px;"><a href="{% url 'cart' %}">Quantity</a></li>
-                            <li style="font-size: 20px;"><a href="{% url 'cart' %}">Total Price</a></li>
-                        </ul>
+                        <h3 class="nav__title">Products</h3>
                     </li>
                     <li class="nav__item">
-                        <h2 class="nav__title">Crocheter</h2>
-                            <ul class="nav__ul">
-                                <li style="font-size: 20px;"><a href="{% url 'orders' %}">Pending</a></li>
-                                <li style="font-size: 20px;"><a href="{% url 'orders' %}">Cancelled</a></li>
-                                <li style="font-size: 20px;"><a href="{% url 'orders' %}">Shipped</a></li>
-                                <li style="font-size: 20px;"><a href="{% url 'orders' %}">Delivered</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav__item">
-                            <h2 class="nav__title">About s</h2>
-                                <ul class="nav__ul">
-                                    <li style="font-size: 20px;"><a href="{% url 'orders' %}">Pending</a></li>
-                                    <li style="font-size: 20px;"><a href="{% url 'orders' %}">Cancelled</a></li>
-                                    <li style="font-size: 20px;"><a href="{% url 'orders' %}">Shipped</a></li>
-                                    <li style="font-size: 20px;"><a href="{% url 'orders' %}">Delivered</a></li>
-                                </ul>
-                            </li>
-                    <li class="nav__item">
-                    <h2 class="nav__title">Contacts</h2>
-                        <ul class="nav__ul">
-                            <li style="font-size: 20px;"><a href="{% url 'orders' %}">Pending</a></li>
-                            <li style="font-size: 20px;"><a href="{% url 'orders' %}">Cancelled</a></li>
-                            <li style="font-size: 20px;"><a href="{% url 'orders' %}">Shipped</a></li>
-                            <li style="font-size: 20px;"><a href="{% url 'orders' %}">Delivered</a></li>
-                        </ul>
+                        <h3 class="nav__title">Crocheter</h3>
                     </li>
                     <li class="nav__item">
-                        <h2 class="nav__title">Support</h2>
-                            <ul class="nav__ul">
-                                <li style="font-size: 20px;"><a href="{% url 'orders' %}">Pending</a></li>
-                                <li style="font-size: 20px;"><a href="{% url 'orders' %}">Cancelled</a></li>
-                                <li style="font-size: 20px;"><a href="{% url 'orders' %}">Shipped</a></li>
-                                <li style="font-size: 20px;"><a href="{% url 'orders' %}">Delivered</a></li>
-                            </ul>
-                        </li>
+                        <h3 class="nav__title">Business</h3>
+                    </li>
+                    <li class="nav__item">
+                        <h3 class="nav__title">Contacts</h3>
+                    </li>
+                    <li class="nav__item">
+                        <h3 class="nav__title">Support</h3>
+                    </li>
                 </ul>
             </div>
         </div>
