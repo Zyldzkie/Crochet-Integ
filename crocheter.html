@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'primary';
+            src: url('fonts/brittany/BrittanySignature.ttf') format('truetype');
+        }
+        h2, h1 {
+            font-size: 3rem;
+            font-family: 'primary', sans-serif;
+            color: #4C3C32
+        }
+        @font-face {
+            font-family: 'secondary';
+            src: url('fonts/roboto/Roboto-Light.ttf') format('truetype');
+        }
+        body {
+            font-family:'Sansita';
+        }
+        .card {
+            margin-bottom: 10px; 
+            margin: 5px;
+        }
+        .card img {
+
+            object-fit: cover;
+        }
+        .card-body {
+            overflow: hidden; 
+        }
+        .card-title,
+        .card-text {
+            text-decoration: none;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .grid-item {
+            width: calc(33% - 16px);
+            margin: 8px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+        .grid-item img {
+            width: 100%;
+            display: block;
+        }
+        @media (max-width: 992px) {
+            .grid-item {
+                width: calc(50% - 16px);
+            }
+        }
+        @media (max-width: 576px) {
+            .grid-item {
+                width: calc(100% - 16px);
+            }
+        }
+        .card-img {
+            transition: all 1s ease;
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+        }
+        .card:hover .card-img {
+            transition: all 1s ease;
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+
+        <nav class="navbar navbar-expand-lg" style="background-color: #55286F;" >
+            <div class="container-md py-0">
+                <a class="navbar-brand text-light fs-4 d-flex justify-content-center" href="home.html">
+                    <img src="assets/crochet-logo.png" class="d-flex justify-content-center" width="100px" height="100px" alt="">
+                </a>
+                <button class="navbar-toggler bg-body-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link px-3 active fw-semibold bg-body-secondary ms-2" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link text-light fw-semibold px-3 ms-2" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link text-light fw-semibold px-3 ms-2" href="crocheter.html">Crocheter</a>
+                        </li>
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link text-light fw-semibold px-3 ms-2" href="business.html">Business</a>
+                        </li>
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link text-light fw-semibold px-3 ms-2" href="contacts.html">Contacts</a>
+                        </li>
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link text-light fw-semibold px-3 ms-2" href="support.html">Support</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+
+    <div class="container-md m-4">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a style=" text-decoration: none; color:#55286F" href="home.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Crocheter</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        <div class="card mb-3" style="max-width: 800px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="assets/crocheter.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Meet the Crocheter!</h5>
+                        <p style="color:#55286F"><b>Lorilee C. Lanticse</b></p>
+                        <p class="card-text" style="text-align: justify;">Four years ago, I picked up my first crochet hook out of sheer boredom, never imagining that it would lead me down such a rewarding path. What started as a simple pastime quickly blossomed into a passion for creating beautiful, intricate designs.
+
+                            I discovered that I had a natural talent for designing crochet products, turning simple yarn into delightful works of art. From cozy earmuffs to charming keychains and elegant home decor, each piece is crafted with love and attention to detail.
+                            
+                            As my skills grew, so did my enthusiasm. Friends and family started requesting custom pieces, and soon I realized that my hobby could also be a business. Today, I’m thrilled to share my creations with you, bringing warmth, style, and a touch of whimsy to your life.
+                            
+                            Thank you for joining me on this journey. I hope you find as much joy in my crochet products as I do in making them!</p>
+                        <p class="card-text"><small class="text-body-secondary">"Sometimes you have to make a decision that will break your heart but will give peace to your soul."</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
