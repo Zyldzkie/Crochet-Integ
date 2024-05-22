@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'primary';
+            src: url('fonts/brittany/BrittanySignature.ttf') format('truetype');
+        }
+        h2, h1 {
+            font-size: 3rem;
+            font-family: 'primary', sans-serif;
+            color: #4C3C32
+        }
+        @font-face {
+            font-family: 'secondary';
+            src: url('fonts/roboto/Roboto-Light.ttf') format('truetype');
+        }
+        body {
+            font-family:'Sansita';
+        }
+        .card {
+            margin-bottom: 10px; 
+            margin: 5px;
+        }
+        .card img {
+
+            object-fit: cover;
+        }
+        .card-body {
+            overflow: hidden; 
+        }
+        .card-title,
+        .card-text {
+            text-decoration: none;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .grid-item {
+            width: calc(33% - 16px);
+            margin: 8px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+        .grid-item img {
+            width: 100%;
+            display: block;
+        }
+        @media (max-width: 992px) {
+            .grid-item {
+                width: calc(50% - 16px);
+            }
+        }
+        @media (max-width: 576px) {
+            .grid-item {
+                width: calc(100% - 16px);
+            }
+        }
+        .card-img {
+            transition: all 1s ease;
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+        }
+        .card:hover .card-img {
+            transition: all 1s ease;
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+        }
+        p.indent{
+            text-indent: 30px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+
+        <nav class="navbar navbar-expand-lg" style="background-color: #55286F;" >
+            <div class="container-md py-0">
+                <a class="navbar-brand text-light fs-4 d-flex justify-content-center" href="home.html">
+                    <img src="assets/crochet-logo.png" class="d-flex justify-content-center" width="100px" height="100px" alt="">
+                </a>
+                <button class="navbar-toggler bg-body-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link px-3 fw-semibold text-light ms-2" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link text-light fw-semibold px-3 ms-2" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link fw-semibold text-light px-3 ms-2" href="crocheter.html">Crocheter</a>
+                        </li>
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link active bg-body-secondary  fw-semibold px-3 ms-2" href="business.html">Business</a>
+                        </li>
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link text-light fw-semibold px-3 ms-2" href="contacts.html">Contacts</a>
+                        </li>
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link text-light fw-semibold px-3 ms-2" href="support.html">Support</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="container-md m-4">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a style=" text-decoration: none; color:#55286F" href="home.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Business</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        <div class="card mb-3" style="max-width: 800px;">
+            <div class="row g-0">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center; font-size: 40px;">About the Business</h5>
+                        <p class="text-center mb-5" style="color:#55286F; font-size: 18px;"><b>Shelby Lorraine's Crochet</b></p>
+
+                        <p class="card-text indent" style="text-align: justify; font-size: 25px;">
+                        Shelby Lorraine's Crochet specializes in handmade crochet items, ranging from cozy blankets and scarves to intricate amigurumi toys and home décor. Founded by Lorilee C. Lanticse, the business began as a passion project and has since grown into a thriving online enterprise, known for its commitment to quality craftsmanship and attention to detail. Operating from a home-based setup, Shelby Lorraine's Crochet offers a diverse range of products crafted with high-quality yarns and innovative crochet techniques. With a mission to spread joy and warmth through the art of crochet, the business prioritizes sustainability and customer satisfaction, catering to a global audience through its website and social media platforms.<br><br></p>
+
+                        <p class="card-text indent" style="text-align: justify; font-size: 25px;">Driven by a love for the handmade ethos, Shelby Lorraine's Crochet has garnered recognition for its unique creations and dedication to craftsmanship. With 4 years of experience in the crochet industry. From featured press coverage to a growing social media following, Shelby Lorraine's Crochet continues to inspire creativity and delight customers with every stitch, embodying the essence of handmade charm and personal connection in every product offered.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
