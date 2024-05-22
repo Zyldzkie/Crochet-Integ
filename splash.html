@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(../Crochet-Integ/assets/splash.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+        }
+        h1, h2{
+            font-family: "Sansita";
+        }
+        .content-wrapper {
+            text-align: center;
+        }
+        /* CSS */
+        .button-56 {
+          align-items: center;
+          background-color: #fee6e3;
+          border: 2px solid #111;
+          border-radius: 8px;
+          box-sizing: border-box;
+          color: #111;
+          cursor: pointer;
+          display: flex;
+          font-family: inherit;
+          font-size: 16px;
+          height: 48px;
+          justify-content: center;
+          line-height: 24px;
+          max-width: 100%;
+          padding: 0 25px;
+          position: relative;
+          text-align: center;
+          text-decoration: none;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+        }
+
+        .button-56:after {
+          background-color: #111;
+          border-radius: 8px;
+          content: "";
+          display: block;
+          height: 48px;
+          left: 0;
+          width: 100%;
+          position: absolute;
+          top: -2px;
+          transform: translate(8px, 8px);
+          transition: transform .2s ease-out;
+          z-index: -1;
+        }
+
+        .button-56:hover:after {
+          transform: translate(0, 0);
+        }
+
+        .button-56:active {
+          background-color: #ffdeda;
+          outline: 0;
+        }
+
+        .button-56:hover {
+          outline: 0;
+        }
+
+        @media (min-width: 768px) {
+          .button-56 {
+            padding: 0 40px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+        <div class="content-wrapper" style="margin-bottom: 30px;">
+            <div style="margin-bottom: 80px; margin-top: 60px;">
+            <h1 style="font-size: 90px; margin-bottom: 40px;">SHELBY LORRAINE'S CROCHET</h1>
+            <h2 style="font-size: 50px;">"Crafting comfort one stitch at a time"</h2>
+            </div>
+            <div class="d-flex align-items-center justify-content-center ">
+            <a href="home.html" style="text-decoration: none;"><button class="button-56" role="button" style="font-family: Sansita; font-size: 40px;">Enter</button></a>
+        </div>
+    </div>
+</body>
+</html>
